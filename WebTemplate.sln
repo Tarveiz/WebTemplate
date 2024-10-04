@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTemplate.Api", "WebTemplate.Api\WebTemplate.Api.csproj", "{37780DC9-2EF4-4680-B6AA-8532DEBB3064}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTemplate.Api", "WebTemplate.Api\WebTemplate.Api.csproj", "{37780DC9-2EF4-4680-B6AA-8532DEBB3064}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTemplate.DAL", "WebTemplate.DAL\WebTemplate.DAL.csproj", "{5924224C-F89F-40E8-BFA2-0011138A1C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTemplate.DAL", "WebTemplate.DAL\WebTemplate.DAL.csproj", "{5924224C-F89F-40E8-BFA2-0011138A1C83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTemplate.DTO", "WebTemplate.DTO\WebTemplate.DTO.csproj", "{D3C4F6E4-91A3-47C1-8EA5-591FCB166533}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTemplate.DTO", "WebTemplate.DTO\WebTemplate.DTO.csproj", "{D3C4F6E4-91A3-47C1-8EA5-591FCB166533}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTemplate.Services", "WebTemplate.Services\WebTemplate.Services.csproj", "{EA7D843F-2900-48EE-9134-3FD8BD25BF1C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTemplate.Info", "WebTemplate.Info\WebTemplate.Info.csproj", "{4F2061DC-201F-45C1-AFC1-39FC6FF5F1D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebTemplate.Services", "WebTemplate.Services\WebTemplate.Services.csproj", "{EA7D843F-2900-48EE-9134-3FD8BD25BF1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		{EA7D843F-2900-48EE-9134-3FD8BD25BF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7D843F-2900-48EE-9134-3FD8BD25BF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA7D843F-2900-48EE-9134-3FD8BD25BF1C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F2061DC-201F-45C1-AFC1-39FC6FF5F1D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4F2061DC-201F-45C1-AFC1-39FC6FF5F1D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4F2061DC-201F-45C1-AFC1-39FC6FF5F1D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4F2061DC-201F-45C1-AFC1-39FC6FF5F1D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

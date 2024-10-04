@@ -2,7 +2,6 @@
 using NLog;
 using NLog.Web;
 using WebTemplate.DAL;
-using WebTemplate.Info;
 using WebTemplate.Services.Interfaces;
 using WebTemplate.Services.Services;
 
@@ -60,8 +59,6 @@ public class Program
             app.UseAuthorization();
 
             app.MapControllers();
-
-            app.MapBuildInfoRoute();
 
             app.Run();
         }

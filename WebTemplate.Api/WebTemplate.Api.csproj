@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebTemplate.DAL\WebTemplate.DAL.csproj" />
-    <ProjectReference Include="..\WebTemplate.Info\WebTemplate.Info.csproj" />
     <ProjectReference Include="..\WebTemplate.Services\WebTemplate.Services.csproj" />
   </ItemGroup>
 
