@@ -46,11 +46,11 @@ public class Program
             else
             {
                 app.UseStatusCodePages();
-                app.UseResponseCompression();
+                //app.UseResponseCompression();
             }
 
             app.UseStaticFiles();
-            app.UseHttpLogging();
+            //app.UseHttpLogging();
             app.UseRouting();
 
             app.UseHttpsRedirection();
