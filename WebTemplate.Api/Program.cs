@@ -13,22 +13,30 @@ public class Program
             .Setup()
             .LoadConfigurationFromAppSettings()
             .GetCurrentClassLogger();
+        logger.Info("init main");
+
         try
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
 
             builder.Services.AddScoped<ITestService, TestService>();
 
+            #region SwaggerMiddleware
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            #endregion
 
             builder.Services.AddDbContext<DataContext>(options =>
                 options.UseNpgsql(builder.Configuration.GetConnectionString("DataContext")));
+
+            #region Nlog
+            builder.Logging.ClearProviders();
+            builder.Host.UseNLog();
+            #endregion
 
             var app = builder.Build();
 
@@ -37,25 +45,23 @@ public class Program
             {
                 app.UseDeveloperExceptionPage();
 
+                #region Swagger
                 app.UseSwagger();
                 app.UseSwaggerUI(options =>
                 {
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                 });
+                #endregion
             }
             else
             {
+                app.UseExceptionHandler("/Home/Error");
                 app.UseStatusCodePages();
                 //app.UseResponseCompression();
             }
 
             app.UseStaticFiles();
-            //app.UseHttpLogging();
             app.UseRouting();
-
-            app.UseHttpsRedirection();
-
-            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

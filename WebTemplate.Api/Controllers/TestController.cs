@@ -12,6 +12,7 @@ namespace WebTemplate.Api.Controllers;
 public class TestController : ControllerBase
 {
     private ITestService _testService;
+
     public TestController(ITestService testService)
     {
         _testService = testService;
